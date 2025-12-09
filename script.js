@@ -212,69 +212,47 @@ let generatedOTP = "";
     }
 
 
-    /*===========================================
-      show and hide password function in sign in 
-      ===========================================
+    /*==========================================================
+      show and hide password function in DOMContentLoaded
+      ==========================================================
     */
-    // const pass = document.getElementById("login_password");
-    // const toggle = document.getElementById("togglePassword");
-    // toggle.addEventListener("click", () => {
-    //     if (pass.type === "password") {
-    //         pass.type = "text";
-    //         toggle.src = "image/showEye.png";   // open eye icon
-    //     } else {
-    //         pass.type = "password";
-    //         toggle.src = "image/hideEye.png";        // closed eye icon
-    //     }
-    // });
-
-    // /*===========================================
-    //   show and hide password function in sign Up 
-    //   ===========================================
-    // */
-
-    // const pass2 = document.getElementById("password2");
-    // const toggle2 = document.getElementById("togglePassword2")
-    // toggle2.addEventListener("click", ()=>{
-    //     if (pass2.type === "password") {
-    //         pass2.type = "text";
-    //         toggle2.src = "image/showEye.png";   // open eye icon
-    //     } else {
-    //         pass2.type = "password";
-    //         toggle2.src = "image/hideEye.png";        // closed eye icon
-    //     }
-    // });
 
     document.addEventListener("DOMContentLoaded", () => {
-    // Sign In password toggle
-    const pass = document.getElementById("login_password");
-    const toggle = document.getElementById("togglePassword");
+        /*============================================================
+            show and hide password function in sign in password toggle
+          ============================================================
+        */
+        const pass = document.getElementById("login_password");
+        const toggle = document.getElementById("togglePassword");
 
-    if(pass && toggle){
-        toggle.addEventListener("click", () => {
-            if(pass.type === "password"){
-                pass.type = "text";
-                toggle.src = "./image/showEye.png";
-            } else {
-                pass.type = "password";
-                toggle.src = "./image/hideEye.png";
-            }
-        });
-    }
+        if(pass && toggle){
+            toggle.addEventListener("click", () => {
+                if(pass.type === "password"){
+                    pass.type = "text";
+                    toggle.src = "./image/showEye.png";
+                } else {
+                    pass.type = "password";
+                    toggle.src = "./image/hideEye.png";
+                }
+            });
+        }
 
-    // Sign Up password toggle
-    const pass2 = document.getElementById("password2");
-    const toggle2 = document.getElementById("togglePassword2");
+        /*==========================================================
+            show and hide password function in sign Up password toggle
+          ==========================================================
+        */
+        const pass2 = document.getElementById("password2");
+        const toggle2 = document.getElementById("togglePassword2");
 
-    if(pass2 && toggle2){
-        toggle2.addEventListener("click", () => {
-            if(pass2.type === "password"){
-                pass2.type = "text";
-                toggle2.src = "./image/showEye.png";
-            } else {
-                pass2.type = "password";
-                toggle2.src = "./image/hideEye.png";
-            }
-        });
-    }
-});
+        if(pass2 && toggle2){
+            toggle2.addEventListener("click", () => {
+                if(pass2.type === "password"){
+                    pass2.type = "text";
+                    toggle2.src = "./image/showEye.png";
+                } else {
+                    pass2.type = "password";
+                    toggle2.src = "./image/hideEye.png";
+                }
+            });
+        }
+    });
