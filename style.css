@@ -1,0 +1,285 @@
+/* ========= BASIC RESET ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* body {
+    background: #eef3ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh; /* device height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eef3ff;
+}
+
+
+/* ========= CONTAINER ========= */
+.box {
+    width: 90%;
+    max-width: 380px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ========= HEADINGS ========= */
+.signIn h2,
+.signUp h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* ========= INPUT STYLES ========= */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f7f9ff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #4a77ff;
+    background: #fff;
+}
+
+/*==============================================================================================
+  these are properties style on SignIN in which clicked on these button then sign in to database
+  ==============================================================================================
+*/
+#SignIN{
+    width: 100%;
+    padding: 12px;
+    background: #4a77ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3a5fd9;
+}
+
+/* ===========================================================================
+   these are all properties styles the forgot password for create new password
+  ============================================================================
+*/
+#forgotBtn {
+    background: transparent;
+    color: #4a77ff;
+    border: none;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#forgotBtn:hover {
+    color: #0036c7;
+}
+
+
+#goToSignUp{
+    border: none;
+    background: none;
+    color: blue;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*=========================================
+  here is send OTP button that is customize
+  =========================================
+*/
+#sendOtp{
+    width: 100%;
+    padding: 12px;
+    background: #4a77ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#goToSignIN{
+    border: none;
+    background: none;
+    color: blue;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#sendOtp:hover {
+    background: #0036c7;
+}
+
+/* ========= OTP BOX ========= */
+#step2 {
+    width: 90%;
+    max-width: 350px;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+#otpInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+}
+
+/* ========= MESSAGE ========= */
+#message {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* ========= MOBILE RESPONSIVE ========= */
+@media (max-width: 480px) {
+    .box {
+        width: 95%;
+        padding: 22px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 11px;
+    }
+
+    input, select {
+        font-size: 15px;
+        padding: 11px;
+    }
+}
+
+
+/*======================
+  all <p> tag properties
+  ======================
+*/
+p{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#verifyguddu{
+    width: 100%;
+    padding: 12px;
+    background: #4a77ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*=============================
+  add date of birth placeholder
+ ==============================
+*/
+
+.dob-container {
+  position: relative;
+  width: 100%;
+}
+
+.dob-container input {
+  width: 100%;
+  padding: 12px;
+}
+
+.dob-container span {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.dob-container input:focus + span,
+.dob-container input:not(:placeholder-shown) + span {
+  display: none; /* या move it up like floating label */
+}
+
+
+/*==================================
+  show and hide properties
+  ==================================
+*/
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 16px;
+}
+
+.password-box img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.password-box img:hover {
+    opacity: 1;
+}
