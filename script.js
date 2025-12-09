@@ -216,7 +216,7 @@ let generatedOTP = "";
       show and hide password function in sign in 
       ===========================================
     */
-    const pass = document.getElementById("password");
+    const pass = document.getElementById("login_password");
     const toggle = document.getElementById("togglePassword");
     toggle.addEventListener("click", () => {
         if (pass.type === "password") {
