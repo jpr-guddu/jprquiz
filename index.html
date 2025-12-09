@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email OTP Login</title>
+  <link rel="stylesheet" href="signUp1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+  <div class="box" id="boxy">
+    <!--======================
+    Sign In for users
+    ========================
+    -->
+    <div id="signIn-box">
+      <h2>Sign In</h2>
+      <input id="login_email" type="text" placeholder="Email">
+      <div class="password-box">
+        <input id="password" type="password" placeholder="Password" autocomplete="new-password" required>
+        <img src="image/hideEye.png" id="togglePassword">
+        <img src="image/showEye.png" id="togglePassword" style="display: none;">
+      </div>
+      <!-- <input id="login_password" type="password" placeholder="Password"> -->
+      <p id="login_msg"></p>
+
+      <button id="SignIN" onclick="signin()">Sign In</button>
+      <button id="forgotBtn" onclick="forgotPassword()">Forgot Password?</button>
+
+      <p>Create new Account <button id="goToSignUp" onclick="SignUp()">SignUp</button></p>
+        
+      
+    </div>
+
+    <!--===============================
+      Sign Up form for user then login
+      =================================
+    -->
+    <div id="signUp-box" style="display: none;">
+      <h2>Sign In</h2>
+      <form autocomplete="off">
+        <input id="name" type="text" placeholder="Full Name" autocomplete="off" required>
+        <div class="dob-container">
+          <span>Date of Birth</span>
+          <input id="dob" type="date" required>
+        </div>
+
+        <select id="gender" autocomplete="off">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="">Other</option>
+        </select>
+
+        <input id="age" type="number" placeholder="Age" autocomplete="off" required >
+        <!-- <input id="dob" type="date" autocomplete="off" required placeholder="Date of Birth"> -->
+        <input id="email" type="email" placeholder="Email" autocomplete="off" required>
+        <div class="password-box">
+          <input id="password2" type="password" placeholder="Password" autocomplete="new-password" required>
+          <img src="image/hideEye.png" id="togglePassword2">
+          <!-- <img src="image/showEye.png" id="togglePassword" style="display: none;"> -->
+
+        </div>
+        
+      </form>
+
+      <button id="sendOtp">SignUp</button>
+
+      <p id="msg" style="color:red;"></p>
+      <p>Already have an account? 
+      <button id="goToSignIN" onclick="SignIn()" style="background:none;border:none;color:blue;cursor:pointer;">Sign In</button>
+      </p>
+    </div>
+  </div>
+
+  <div id="step2" style="display:none;">
+    <input type="text" id="otpInput" placeholder="Enter OTP">
+    <p id="message" style="display: none;"></p>
+    <button id="verifyguddu">Verify OTP</button>
+  </div>
+
+  
+  <!-- JS FIXED (No module) -->
+  <script src="signUp.js"></script>
+
+</body>
+</html>
