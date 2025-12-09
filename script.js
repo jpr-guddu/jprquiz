@@ -219,11 +219,11 @@ let generatedOTP = "";
     const pass = document.getElementById("login_password");
     const toggle = document.getElementById("togglePassword");
     toggle.addEventListener("click", () => {
-        if (pass.type === "password") {
+        if (pass.type === "login_password") {
             pass.type = "text";
             toggle.src = "image/showEye.png";   // open eye icon
         } else {
-            pass.type = "password";
+            pass.type = "login_password";
             toggle.src = "image/hideEye.png";        // closed eye icon
         }
     });
